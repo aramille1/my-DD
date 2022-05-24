@@ -14,6 +14,7 @@ class DrivingOffersController < ApplicationController
 
   def create
     @driving_offer = DrivingOffer.new(strong_params)
+    @driving_offer.user = current_user
     @driving_offer.save
     redirect_to driving_offers_path
   end
