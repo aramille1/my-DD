@@ -1,12 +1,13 @@
 class DrivingOffersController < ApplicationController
   def index
     @driving_offers = DrivingOffer.all
+    # @driving_offer = DrivingOffer.find(params[:id])
   end
 
   def show
+
     @driving_offer = DrivingOffer.find(params[:id])
   end
-
 
   def new
     @driving_offer = DrivingOffer.new
