@@ -25,7 +25,7 @@ require 'faker'
     event_name: Faker::Music.genre
   )
   offer1.user = user1 #offer1.user_id = user1.id
-offer1.save!
+  offer1.save!
 end
 
 
