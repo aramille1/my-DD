@@ -1,3 +1,10 @@
+ body {
+   background-color: rgb(7, 0, 58);
+ }
+
+.card {
+  border: none;
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -14,4 +21,29 @@
     margin-top: 15px;
     height: 70px;
     width: 70px;
+  }
+  .header {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+  .top_header {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: -webkit-xxx-large;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+  .slogan {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(255, 120, 185);
+  }
+
+  .btn-primary {
+    background-color: rgb(255, 120, 185);
+    border: none;
+
   }
