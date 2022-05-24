@@ -20,129 +20,22 @@
 <br>
 <h1>Offers</h1>
 <div class="container card-container">
+<% @driving_offers.each do |offer| %>
     <div class="card offer-card" class="cardstyle" style="width: 18rem;">
      <img class="avatar-large ava_space" alt="avatar-large" src="https://source.unsplash.com/random"/>
       <div class="card-body">
-        <h5 class="card-title">Driving offer</h5>
-        <p class="card-text">Offer describtion</p>
+        <h5 class="card-title"> <%= offer.user.first_name %> <%= offer.user.second_name %></h5>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Start time 01:00</li>
-        <li class="list-group-item">End time 02:00</li>
-        <li class="list-group-item">Price 25$</li>
-        <li class="list-group-item">Qualification C</li>
-        <li class="list-group-item">Experiences</li>
+        <li class="list-group-item">Start time <%=offer.start_time%> </li>
+        <%# <li class="list-group-item">End time <%= offer.end_time %> </li>
+        <li class="list-group-item">Price <%= offer.price %> € </li>
+        <%# <li class="list-group-item">Qualification <%= offer.qualification %></li>
+        <%# <li class="list-group-item">Experiences <%= offer.experience %></li>
+        <%# <li class="list-group-item">Event address <%= offer.event_address %></li>
+        <%# <li class="list-group-item">Event name <%= offer.event_name %> </li>
       </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Book drive</a>
-      </div>
+       <%= link_to "Book drive", driving_offers_path(@driving_offer) , class: "btn btn-primary"%>
     </div>
-    <div class="card offer-card" class="cardstyle" style="width: 18rem;">
-      <img class="avatar-large ava_space" alt="avatar-large" src="https://source.unsplash.com/random"/>
-      <div class="card-body">
-        <h5 class="card-title">Driving offer</h5>
-        <p class="card-text">Offer describtion</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Start time 01:00</li>
-        <li class="list-group-item">End time 02:00</li>
-        <li class="list-group-item">Price 25$</li>
-        <li class="list-group-item">Qualification C</li>
-        <li class="list-group-item">Experiences</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Book drive</a>
-      </div>
-    </div>
-    <div class="card offer-card" class="cardstyle" style="width: 18rem;">
-      <img class="avatar-large ava_space" alt="avatar-large" src="https://source.unsplash.com/random"/>
-      <div class="card-body">
-        <h5 class="card-title">Driving offer</h5>
-        <p class="card-text">Offer describtion</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Start time 01:00</li>
-        <li class="list-group-item">End time 02:00</li>
-        <li class="list-group-item">Price 25$</li>
-        <li class="list-group-item">Qualification C</li>
-        <li class="list-group-item">Experiences</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Book drive</a>
-      </div>
-    </div>
-    <div class="card offer-card" class="cardstyle" style="width: 18rem;">
-      <img class="avatar-large ava_space" alt="avatar-large" src="https://source.unsplash.com/random"/>
-      <div class="card-body">
-        <h5 class="card-title">Driving offer</h5>
-        <p class="card-text">Offer describtion</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Start time 01:00</li>
-        <li class="list-group-item">End time 02:00</li>
-        <li class="list-group-item">Price 25$</li>
-        <li class="list-group-item">Qualification C</li>
-        <li class="list-group-item">Experiences</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Book drive</a>
-      </div>
-    </div>
-    <div class="card offer-card" class="cardstyle" style="width: 18rem;">
-      <img class="avatar-large ava_space" alt="avatar-large" src="https://source.unsplash.com/random"/>
-      <div class="card-body">
-        <h5 class="card-title">Driving offer</h5>
-        <p class="card-text">Offer describtion</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Start time 01:00</li>
-        <li class="list-group-item">End time 02:00</li>
-        <li class="list-group-item">Price 25$</li>
-        <li class="list-group-item">Qualification C</li>
-        <li class="list-group-item">Experiences</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Book drive</a>
-      </div>
-    </div>
-    <div class="card offer-card" class="cardstyle" style="width: 18rem;">
-      <img class="avatar-large ava_space" alt="avatar-large" src="https://source.unsplash.com/random"/>
-      <div class="card-body">
-        <h5 class="card-title">Driving offer</h5>
-        <p class="card-text">Offer describtion</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Start time 01:00</li>
-        <li class="list-group-item">End time 02:00</li>
-        <li class="list-group-item">Price 25$</li>
-        <li class="list-group-item">Qualification C</li>
-        <li class="list-group-item">Experiences</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Book drive</a>
-      </div>
-    </div>
-    <div class="card offer-card" class="cardstyle" style="width: 18rem;">
-      <img class="avatar-large ava_space" alt="avatar-large" src="https://source.unsplash.com/random"/>
-      <div class="card-body">
-        <h5 class="card-title">Driving offer</h5>
-        <p class="card-text">Offer describtion</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Start time 01:00</li>
-        <li class="list-group-item">End time 02:00</li>
-        <li class="list-group-item">Price 25$</li>
-        <li class="list-group-item">Qualification C</li>
-        <li class="list-group-item">Experiences</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Book drive</a>
-      </div>
-    </div>
-</div>
-
-<% @driving_offers.each do |offer| %>
-  <p>Event address: <%= offer.event_address %></p>
-  <p>Event name: <%= offer.event_address %></p>
-
 <% end %>
+</div>
