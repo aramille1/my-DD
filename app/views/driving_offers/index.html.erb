@@ -35,10 +35,12 @@
         <%# <li class="list-group-item">Event address <%= offer.event_address %></li>
         <%# <li class="list-group-item">Event name <%= offer.event_name %> </li>
       </ul>
-       <%= link_to "Book drive", driving_offers_path(@driving_offer) , class: "btn btn-primary"%>
+       <%= link_to "Book drive", driving_offer_path(offer) , class: "btn btn-primary"%>
     </div>
 <% end %>
 </div>
+
+
 <br>
 <br>
 <br>
