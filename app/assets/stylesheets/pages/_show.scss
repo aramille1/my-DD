@@ -1,23 +1,26 @@
 .wrapper {
   min-height: calc(100vh - 125px - 50px);
 }
+
+.header {
+  width: 100% !important;
+}
 .container {
-  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.card {
-  // background-color: white;
-  //   margin: 0 auto;
+.card-mod {
     max-width:100% !important;
     margin-top: 100px !important;
+}
 .banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/562bdf80499613.5ce33a74c9768.jpg")
 }
 
 .banner h1 {
