@@ -1,26 +1,14 @@
-<p>index page</p>
-<h1 class="top_header">My designated Driver</h1>
-<h3 class="slogan">Drive, don´t fly</h3>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1 class="header">Drive offers</h1>
-<div class="container card-container">
-<% @driving_offers.each do |offer| %>
+<div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/562bdf80499613.5ce33a74c9768.jpg");">
+  <div class="container">
+    <h1><strong>My designated Driver</strong></h1>
+    <p>Drive, don´t fly!</p>
+  </div>
+</div>
+
+<div class="card-container">
+  <h1 class="header container">Drive offers</h1>
+  <% @driving_offers.each do |offer| %>
     <div class="card offer-card" class="cardstyle" style="width: 18rem;">
      <img class="avatar-large ava_space" alt="avatar-large" src="https://source.unsplash.com/random"/>
       <div class="card-body">
@@ -39,7 +27,7 @@
     </div>
 <% end %>
 </div>
-
+</div>
 
 <br>
 <br>
