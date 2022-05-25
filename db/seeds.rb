@@ -9,20 +9,16 @@ require 'faker'
 # DrivingOffer.destroy_all
 10.times do
   user1 = User.new(
-    first_name: Faker::Name.first_name ,
-    second_name: Faker::Name.last_name ,
+    name: Faker::FunnyName.name ,
     email: Faker::Internet.email,
     address: Faker::Address.full_address,
     password: "123456")
   user1.save!
   offer1 = DrivingOffer.new(
-    start_time: Date.today,
-    end_time: Date.tomorrow,
     price: rand(1..100),
     qualification: 'AB',
     experience: rand(1..10),
-    event_address: Faker::Address.full_address,
-    event_name: Faker::Music.genre
+    name: Faker::FunnyName.name,
   )
   offer1.user = user1 #offer1.user_id = user1.id
   offer1.save!

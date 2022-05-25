@@ -9,20 +9,10 @@
   <h1 style="margin-top: 50px;">Drive offers</h1>
 <div class="card-container">
   <% @driving_offers.each do |offer| %>
-    <div class="card offer-card" class="cardstyle" style="width: 18rem;">
-     <img class="avatar-large ava_space" alt="avatar-large" src="https://source.unsplash.com/random"/>
-      <div class="card-body">
-        <h5 class="card-title"> <%= offer.user.first_name %> <%= offer.user.second_name %></h5>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Start time</strong> <%=offer.start_time%> </li>
-        <%# <li class="list-group-item">End time <%= offer.end_time %> </li>
-        <li class="list-group-item"><strong>Price</strong> <%= offer.price %> € </li>
-        <%# <li class="list-group-item">Qualification <%= offer.qualification %></li>
-        <%# <li class="list-group-item">Experiences <%= offer.experience %></li>
-        <%# <li class="list-group-item">Event address <%= offer.event_address %></li>
-        <%# <li class="list-group-item">Event name <%= offer.event_name %> </li>
-      </ul>
+    <div class="card offer-card text-dark" style="width: 18rem;">
+     <img class="avatar-large ava_space mb-2" alt="avatar-large" src="https://source.unsplash.com/random"/>
+      <h5><%= offer.name %></h5>
+      <p><strong>Price from</strong> <%= offer.price %> € </p>
        <%= link_to "Book drive", driving_offer_path(offer) , class: "btn btn-primary"%>
     </div>
 <% end %>

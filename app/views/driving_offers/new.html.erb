@@ -1,6 +1,7 @@
 <div class="container new_form">
 <h1>Create offer</h1>
     <%= simple_form_for(@driving_offer) do |f| %>
+    <%= f.input :name, as: :string, class:"form-control" %>
     <%= f.input :qualification, class:"form-control" %>
     <%= f.input :experience, as: :text, class:"form-control"%>
     <%= f.input :price, class:"form-control"%>
