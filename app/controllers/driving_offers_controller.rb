@@ -4,8 +4,7 @@ class DrivingOffersController < ApplicationController
   end
 
   def show
-    raise
-    # @driving_offer = DrivingOffer.find(params[:id])
+    @driving_offer = DrivingOffer.find(params[:id])
   end
 
 
