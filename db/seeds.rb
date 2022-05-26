@@ -24,16 +24,16 @@ require 'faker'
   offer1.save!
 end
 
-booking = Booking.new(
-  start_time: Date.today,
-  end_time: Date.today,
-  pickup_location: "Templehofer feld",
-  pickup_time: "7pm",
-  driving_offer_id: 12,
-  user_id: current_user
-)
+# booking = Booking.new(
+#   start_time: Date.today,
+#   end_time: Date.today,
+#   pickup_location: "Templehofer feld",
+#   pickup_time: "7pm",
+#   driving_offer_id: 12,
+#   user_id: current_user
+# )
 
-booking.save!
+# booking.save!
 
 
 
