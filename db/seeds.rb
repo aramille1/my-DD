@@ -5,8 +5,7 @@ require 'faker'
 
 # Examples:
 #
-# User.destroy_all
-# DrivingOffer.destroy_all
+
 5.times do
   user1 = User.new(
     name: Faker::FunnyName.name ,
@@ -22,19 +21,18 @@ require 'faker'
   )
   offer1.user = user1 #offer1.user_id = user1.id
   offer1.save!
+  booking = Booking.new(
+    start_time: Date.today,
+    end_time: Date.today,
+    pickup_location: "Templehofer feld",
+    pickup_time: "7pm",
+  )
+  # booking.driving_offer = offer1
+  # booking.user = User.all.sample
+  # booking.save!
 end
 
-# booking = Booking.new(
-#   start_time: Date.today,
-#   end_time: Date.today,
-#   pickup_location: "Templehofer feld",
-#   pickup_time: "7pm",
-#   driving_offer_id: 12,
-#   user_id: current_user
-# )
 
-# booking.save!
-
-
+puts "created 5 users and offers"
 
 # User.create(name: "Luke", movie: movies.first)

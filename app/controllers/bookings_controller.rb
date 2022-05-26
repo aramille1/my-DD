@@ -2,15 +2,15 @@ class BookingsController < ApplicationController
   before_action :set_driving_offer, only: %i[new create index]
 
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking.where(user: current_user))
   end
 
   def new
-    @booking = Booking.new
+    @booking = authorize Booking.new
   end
 
   def create
-    @booking = Booking.new(strong_params)
+    @booking = authorize Booking.new(strong_params)
     @booking.user = current_user
     @booking.driving_offer = @driving_offer
     @booking.save
