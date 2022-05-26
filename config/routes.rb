@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   # root to: "pages#home"
   # in pages views
 
-  resources :driving_offers
+  resources :driving_offers do
+    resources :bookings, only: [:new, :create, :index]
+  end
   # root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -7,7 +7,7 @@ require 'faker'
 #
 # User.destroy_all
 # DrivingOffer.destroy_all
-10.times do
+5.times do
   user1 = User.new(
     name: Faker::FunnyName.name ,
     email: Faker::Internet.email,
@@ -18,13 +18,22 @@ require 'faker'
     price: rand(1..100),
     qualification: 'AB',
     experience: rand(1..10),
-    name: Faker::FunnyName.name,
+    name: Faker::FunnyName.name
   )
   offer1.user = user1 #offer1.user_id = user1.id
   offer1.save!
 end
 
+booking = Booking.new(
+  start_time: Date.today,
+  end_time: Date.today,
+  pickup_location: "Templehofer feld",
+  pickup_time: "7pm",
+  driving_offer_id: 12,
+  user_id: current_user
+)
 
+booking.save
 
 
 
