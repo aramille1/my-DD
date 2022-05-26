@@ -1,4 +1,4 @@
-  <h1>Welcome to you Dashboard, <%= current_user.name%></h1>
+  <h1 class="font">Welcome to you Dashboard, <%= current_user.name%></h1>
 
 
 
@@ -11,8 +11,8 @@
     <div class="col-md-8">
       <div class="card-body">
           <h5 class="card-title">Driver's name: <%= item.driving_offer.name %></h5>
-          <p class="card-text">Pick Location:  <%= item.pickup_location %></p>
-          <p class="card-text">Pick Time:  <%= item.pickup_time %></p>
+          <p class="card-text"><%= image_tag 'geo-alt-fill' %><%= item.pickup_location %></p>
+          <p class="card-text"><%= image_tag 'clock-fill' %><%= item.pickup_time %></p>
       </div>
     </div>
   </div>
