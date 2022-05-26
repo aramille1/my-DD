@@ -33,7 +33,7 @@ booking = Booking.new(
   user_id: current_user
 )
 
-booking.save
+booking.save!
 
 
 
