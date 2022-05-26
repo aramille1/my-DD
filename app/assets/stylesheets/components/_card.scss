@@ -4,12 +4,6 @@
 
 .card {
   border: none;
-
-}
-
-.offer-card {
-  align-items: center;
-  margin-bottom: 30px !important;
 }
 .banner {
   background-size: cover;
@@ -35,7 +29,9 @@
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+  .container {
 
+  }
   .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -77,10 +73,5 @@
   .btn-primary {
     background-color: rgb(255, 120, 185);
     border: none;
-    width: 100%;
 
-  }
-
-  .card-body {
-    padding: 0rem 1rem !important;
   }
