@@ -7,7 +7,7 @@ class DrivingOffersController < ApplicationController
 
   def show
     @driving_offer = authorize DrivingOffer.find(params[:id])
-     @driving_offer = DrivingOffer.find(params[:id])
+    #  @driving_offer = DrivingOffer.find(params[:id])
   end
 
   def new
