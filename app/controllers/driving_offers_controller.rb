@@ -28,7 +28,7 @@ class DrivingOffersController < ApplicationController
 
   def strong_params
     params.require(:driving_offer).permit(:name, :qualification,
-                                          :experience, :event_address, :event_name)
+                                          :experience, :event_address, :event_name, :photo)
   end
 
 

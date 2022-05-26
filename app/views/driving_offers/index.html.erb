@@ -10,7 +10,12 @@
 <div class="card-container">
   <% @driving_offers.each do |offer| %>
     <div class="card offer-card text-dark" style="width: 18rem;">
-     <img class="avatar-large ava_space mb-2" alt="avatar-large" src="https://source.unsplash.com/random"/>
+      <% if offer.photo.attached? %>
+        <%= cl_image_tag(offer.photo.key, crop: :fill) %>
+        <% else %>
+        <img class="avatar-large ava_space mb-2" alt="avatar-large" src="https://source.unsplash.com/random"/>
+      <% end %>
+
       <h5><%= offer.name %></h5>
       <p><strong><%= image_tag 'cash-coin.svg' %></strong> <%= offer.price %> € </p>
        <%= link_to "Book drive", driving_offer_path(offer) , class: "btn btn-primary"%>
