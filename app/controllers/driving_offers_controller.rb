@@ -15,10 +15,11 @@ class DrivingOffersController < ApplicationController
   end
 
   def create
-    @driving_offer = DrivingOffer.new(strong_params)
+    @driving_offer = authorize DrivingOffer.new(strong_params)
     @driving_offer.user = current_user
+    # @full_name = `#{@driving_offer.user.first_name} #{@driving_offer.user.first_name}`
     @driving_offer.save
-    redirect_to driving_offers_path
+    redirect_to driving_offers_path(@driving_offer)
   end
 
   def destroy
@@ -26,7 +27,7 @@ class DrivingOffersController < ApplicationController
   end
 
   def strong_params
-    params.require(:driving_offer).permit(:start_time, :end_time, :price, :qualification,
+    params.require(:driving_offer).permit(:name, :qualification,
                                           :experience, :event_address, :event_name)
   end
 

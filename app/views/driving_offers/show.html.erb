@@ -1,26 +1,36 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-<h1>Show / driving offer</h1>
-<div class="card offer-card" class="cardstyle" style="width: 18rem;">
-      <img class="avatar-large ava_space" alt="avatar-large" src="https://source.unsplash.com/random"/>
-      <div class="card-body">
-        <h2 class="card-title">Driving offer</h2>
-        <h3 class="card-text">Offer describtion</h3>
+<div class="wrapper">
+  <div class="container">
+    <div class="card card-mod mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://media.istockphoto.com/photos/portrait-of-handsome-smiling-young-man-with-crossed-arms-picture-id1200677760?k=20&m=1200677760&s=612x612&w=0&h=JCqytPoHb6bQqU9bq6gsWT2EX1G5chlW5aNK81Kh4Lg=" class="card-img-top" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-4">
+          <div class="card-body">
+            <h1 class="card-title"><%= @driving_offer.name %></h1><br>
+            <p class="card-text">Experience:
+              <%= @driving_offer.experience %></p>
+            <p class="card-text">Qualification:
+              <%= @driving_offer.qualification %></p>
+            <p class="card-text">Price from:
+              <%= @driving_offer.price %>
+              euro</p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+            <%= link_to "Book", new_driving_offer_path, class: "btn btn-outline-success" %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-body">
+              <%= simple_form_for(@driving_offer) do |f| %>
+              <%= f.input :name, as: :string, class:"form-control" %>
+              <%= f.input :qualification, class:"form-control" %>
+              <%= f.input :experience, as: :text, class:"form-control"%>
+              <%= f.input :price, class:"form-control"%>
+              <%= f.submit %>
+              <% end %>
+          </div>
+        </div>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Start time 01:00</li>
-        <li class="list-group-item">End time 02:00</li>
-        <li class="list-group-item">Price 25$</li>
-        <li class="list-group-item">Qualification C</li>
-        <li class="list-group-item">Experiences</li>
-      </ul>
-
-  <a href="#" class="stretched-link">Continue reading</a>
-</body>
-</html>
+    </div>
