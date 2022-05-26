@@ -87,13 +87,23 @@
   }
   .btn-outline-success:hover {
     background-color: #ff78b9;
+    border-color: #ff78b9;
     text-decoration-color: white;
   }
   .btn-outline-success {
-    color: #ffffff;
-    border-color: #ffffff
+    color: #ff78b9;
+    border-color: #ff78b9;
   }
   .nav-link:hover {  background-color: #ff78b9;
     text-decoration-color: white;
-
   }
+  .card-title {
+    color: #ff78b9;
+  }
+  .card-text{
+    color: black;
+  }
+  .col-md-8{
+    background-color: white;
+  }
+

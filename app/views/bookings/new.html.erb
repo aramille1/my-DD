@@ -1,10 +1,10 @@
 <div class="container new_form">
-<h1>Book a ride</h1>
+<h1 class="font">Book a ride</h1>
     <%= simple_form_for([@driving_offer, @booking]) do |f| %>
     <%= f.input :start_time, class:"form-control" %>
     <%= f.input :end_time, class:"form-control" %>
     <%= f.input :pickup_location, as: :string, class:"form-control"%>
     <%= f.input :pickup_time, as: :string, class:"form-control"%>
-    <%= f.submit %>
+    <%= f.submit :"Book Ride", class:"btn btn-dark"%>
   <% end %>
 </div>
