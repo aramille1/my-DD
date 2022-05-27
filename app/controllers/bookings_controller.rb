@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.driving_offer = @driving_offer
     @booking.save
-    redirect_to driving_offer_bookings_path
+    redirect_to dashboard_index_path
   end
 
   private

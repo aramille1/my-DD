@@ -23,12 +23,15 @@ class DrivingOffersController < ApplicationController
   end
 
   def destroy
-    authorize @restaurant
+    @driving_offer = DrivingOffer.find(params[:id])
+    authorize @driving_offer
+    @driving_offer.destroy
+    redirect_to dashboard_index_path
   end
 
   def strong_params
     params.require(:driving_offer).permit(:name, :qualification,
-                                          :experience, :event_address, :event_name, :photo)
+                                          :experience, :event_address, :event_name, :price, :photo)
   end
 
 
