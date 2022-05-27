@@ -17,7 +17,7 @@
       <% end %>
 
       <h5><%= offer.name %></h5>
-      <p><strong><%= image_tag 'cash-coin.svg' %></strong> <%= offer.price %> € </p>
+      <p><strong><%= image_tag 'cash-coin.svg' %></strong> From <%= offer.price %> € </p>
        <%= link_to "Book drive", driving_offer_path(offer) , class: "btn btn-primary"%>
     </div>
 <% end %>
