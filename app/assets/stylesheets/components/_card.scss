@@ -43,6 +43,12 @@
   .offer-card {
     margin-top: 2rem;
     margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      height: 60%;
+    }
   }
 
   .ava_space {

@@ -1,13 +1,16 @@
-<h1 class="dashboard-header">Welcome to your Dashboard,
+<div class="main-container">
+  <h1 class="dashboard-header">Welcome to your Dashboard,
   <%= current_user.name%></h1>
   <p class="dashboard-sub">Your rides:</p>
 <div class="wrapper">
 
   <% @bookings.each do |item| %>
-    <div class="card text-white bg-dark m-3" style="width: 540px; height: 100%;">
+    <div class="card text-white m-3" style="width: 540px; height:100%">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="https://media.istockphoto.com/photos/portrait-of-handsome-smiling-young-man-with-crossed-arms-picture-id1200677760?k=20&m=1200677760&s=612x612&w=0&h=JCqytPoHb6bQqU9bq6gsWT2EX1G5chlW5aNK81Kh4Lg=" class="img-fluid rounded-start" alt="..."></div>
+           <%= cl_image_tag(item.driving_offer.photo.key, height: 300, width: 300, crop: :fill) %>
+           </div>
+          <%# <img src="https://media.istockphoto.com/photos/portrait-of-handsome-smiling-young-man-with-crossed-arms-picture-id1200677760?k=20&m=1200677760&s=612x612&w=0&h=JCqytPoHb6bQqU9bq6gsWT2EX1G5chlW5aNK81Kh4Lg=" class="img-fluid rounded-start" alt="..."></div> %>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Driver's name:
@@ -27,3 +30,5 @@
       </div>
     <% end %>
   </div>
+
+</div>

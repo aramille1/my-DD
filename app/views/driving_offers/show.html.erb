@@ -5,41 +5,32 @@
         <div class="col-md-4">
 
           <% if @driving_offer.photo.attached? %>
-            <%= cl_image_tag(@driving_offer.photo.key, width: 400, height: 300, crop: :fill) %>
+            <%= cl_image_tag(@driving_offer.photo.key, width: 400, height: 310, crop: :fill) %>
 
-            <% else %>
+          <% else %>
             <img src="https://media.istockphoto.com/photos/portrait-of-handsome-smiling-young-man-with-crossed-arms-picture-id1200677760?k=20&m=1200677760&s=612x612&w=0&h=JCqytPoHb6bQqU9bq6gsWT2EX1G5chlW5aNK81Kh4Lg=" class="card-img-top" class="img-fluid rounded-start" alt="...">
 
-          <% end %>
+            <% end %>
 
-        </div>
-        <div class="col-md-4">
-          <div class="card-body">
-            <h1 class="card-title"><%= @driving_offer.name %></h1>
-            <br>
-              <p class="card-text"><%= image_tag 'bar-chart-line-fill.svg' %>
-                <%= @driving_offer.experience %></p>
-              <p class="card-text"><%= image_tag 'card-checklist.svg' %>
-                <%= @driving_offer.qualification %></p>
-              <p class="card-text"><%= image_tag 'cash-coin.svg' %>
-                <%= @driving_offer.price %>
-                euro</p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-              <%= link_to "Book", new_driving_offer_booking_path(@driving_offer), class: "btn btn-outline-success" %>
-            </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-8">
             <div class="card-body">
-              <%= simple_form_for(@driving_offer) do |f| %>
-                <%= f.input :name, as: :string, class:"form-control" %>
-                <%= f.input :qualification, class:"form-control" %>
-                <%= f.input :experience, as: :text, class:"form-control"%>
-                <%= f.input :price, class:"form-control"%>
-                <%= f.submit %>
-              <% end %>
+              <h1 class="card-title"><%= @driving_offer.name %></h1>
+              <br>
+                <p class="card-text"><%= image_tag 'bar-chart-line-fill.svg' %>
+                  <%= @driving_offer.experience %></p>
+                <p class="card-text"><%= image_tag 'card-checklist.svg' %>
+                  <%= @driving_offer.qualification %></p>
+                <p class="card-text"><%= image_tag 'cash-coin.svg' %>
+                  <%= @driving_offer.price %>
+                  euro</p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+                <%= link_to "Book", new_driving_offer_booking_path(@driving_offer), class: "btn btn-outline-success" %>
             </div>
           </div>
         </div>
       </div>
+</div>
+</div>
