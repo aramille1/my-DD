@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   # root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get "/dashboard", to: "dashboards#index", as: :dashboard_index
+  delete "/dashboard/:id", to: "dashboards#destroy"
+
   # Defines the root path route ("/")
 end

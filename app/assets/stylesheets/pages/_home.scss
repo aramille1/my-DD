@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+.dashboard-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.dashboard-sub {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
