@@ -3,11 +3,12 @@
   <div class="container">
     <h1><strong>My Designated Driver</strong></h1>
     <p>Drive, don't fly!</p>
+    <a href="#offers" class="btn btn-dark glow">Offers</a>
   </div>
 </div>
 
   <h1 class="font" style="margin-top: 50px;">Ride Offers</h1>
-<div class="card-container">
+<div class="card-container" id="offers">
   <% @driving_offers.each do |offer| %>
     <div class="card offer-card text-dark" style="width: 18rem;">
       <% if offer.photo.attached? %>
