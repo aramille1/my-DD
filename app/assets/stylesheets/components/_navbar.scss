@@ -15,3 +15,10 @@
   margin-right: 0 !important;
   margin-left: auto !important;
 }
+
+.bg-dark {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(180deg, #000000c4 50%, rgba(255, 0, 243, 0) 100%);
+  --bs-bg-opacity: 0;
+}
